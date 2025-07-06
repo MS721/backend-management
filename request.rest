@@ -1,0 +1,20 @@
+### Login Request
+POST http://localhost:4000/login
+Content-Type: application/json
+
+{
+    "username": "abcd"
+}
+
+### Get Access Token with Session ID
+POST http://localhost:4000/token
+Content-Type: application/json
+{
+Cookie: sessionId= "sessionId"
+}
+### Get Posts Request
+GET http://localhost:3000/posts
+Content-Type: application/json
+{
+Cookie: accessToken="accessToken"
+}
